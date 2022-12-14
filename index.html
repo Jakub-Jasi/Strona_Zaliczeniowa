@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zaliczenie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="kontener">
+<header>
+    <div id="gora">
+        <div id="obraz">
+        <img  height="300" src="img/start.png" alt="start">
+        </div>
+
+
+        <div class="dropdown" >
+          <button class="dropbtn">Menu</button>
+          <div class="dropdown-content" style="left:0;">
+            <a href="galeria.html">Galeria</a>
+            <a href="mapa.html">Mapa</a>
+            <a href="index.html">Strona główna</a>
+          </div>
+        </div>
+        
+
+
+        </div>
+    </div>
+</header>
+<main>
+    <article>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="img/marcus-lam-car3.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="img/808354d9ec1d859fc6cf7c2131eb907a.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="img/subaru-brz-toyobaru-japanese-cars-night-city-hd-wallpaper-preview.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+      
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        <script>
+          let slideIndex = 0;
+          showSlides();
+          
+          function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 5000); // zmien co 5 s.
+          }
+          </script>
+          
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <div id="pusty"></div>
+    </article>
+</main>
+<footer>
+<div id="tlo_dol">
+  <div id="pusty"></div>
+  <h1>Skontaktuj się z nami</h1>
+  <form action="mailto:jjasinski@gmail.com" method="post" enctype="text/plain">
+    <h2>Imię Nadawcy:</h2>
+    <input type="text" name="Moje Imie"><br>
+    <h2>E-Mail</h2>
+    <input type="email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>
+    <h2>Treść Wiadomości</h2>
+    <textarea id="pole" name="Wiadomosc" rows="4" cols="50" name="comment" size="50"></textarea><br><br>
+    <input class="button" type="submit" value="Send">
+    <input class="button" type="reset" value="Reset">
+</div>
+</form>
+</footer>
+
+
+</div>
+
+    
+</body>
+</html>
